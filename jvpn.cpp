@@ -21,7 +21,7 @@ int main() {
 
 	std::string vpn_path = "/etc/wireguard/";
 	std::cout << "Available VPNs :";
-	for (const auto & entry : fs::recursive_directory_iterator(vpn_path)) {
+	for (const auto & entry : fs::directory_iterator(vpn_path)) {
 		std::cout << entry.path();
     }
     std::cout << std::endl << std::endl;
